@@ -1,0 +1,28 @@
+{
+  "name": "calculator-react",
+  "version": "1.0.0",
+  "description": "Project notes/description.",
+  "scripts": {
+    "pack": "",
+    "build": "webpack --config ./.configs/webpack.release.js",
+    "test": "jest --bail --runInBand --config ./.configs/jest.config.js",
+    "docs": "typedoc --options typedoc.json --exclude \"**/*+(test|index|d).*\" --excludeExternals --out ./docs ./blocks",
+    "setup:fs": "node ./node_modules/sb-resp-configs/setupFs.js",
+    "setup:Types": "node ./node_modules/sb-resp-lib/setupTypings.js",
+    "postinstall": "npm run setup:fs && npm run setup:Types",
+    "build:release": "npm run test:coverage && npm run build",
+    "build:debug": "webpack --config ./.configs/webpack.debug.js",
+    "build:debug-w": "webpack --config ./.configs/webpack.debug.js -w",
+    "dev": "start http-server ./dist -p 9001 && npm run build:debug-w",
+    "test:coverage": "jest --runInBand --coverage --bail --config ./.configs/jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "sb-resp-configs": "^2.0.27",
+    "sb-resp-lib": "^2.2.0"
+  },
+  "dependencies": {}
+}

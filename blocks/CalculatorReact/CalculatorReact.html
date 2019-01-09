@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CalculatorReact dev</title>
+
+    <script src="../../node_modules/sb-resp-lib/_bundles/third-party.js"></script>
+    <script src="../../node_modules/sb-resp-lib/_bundles/sb-resp-lib.dev.min.js"></script>
+    <script src="../../dist/calculatorreact.js"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div id="CalculatorReact" class="calculator-react"></div>
+    <script src="../../dist/CalculatorReact.js"></script>
+    <script>
+        var CalculatorReact = new CalculatorReact(
+            "CalculatorReact", // domId
+            { // BaseBlock options object
+                dict: {},
+                cms: {},
+                navHandler: {},
+                dataProvider: {}
+            }
+        );
+        CalculatorReact.activate();
+    </script>
+
+</body>
+
+</html>

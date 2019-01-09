@@ -1,0 +1,14 @@
+.idea
+node_modules/
+.vscode
+.cache-loader/
+package-lock.json
+yarn.lock
+.yarnclean
+yarn-error.log
+dist/*
+linter/*
+coverage/*
+/.configs/*
+tsconfig.json
+.babelrc
